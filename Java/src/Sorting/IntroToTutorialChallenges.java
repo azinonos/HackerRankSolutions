@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 /**
  * Created by Andreas Zinonos on 23/05/17.
+ *
+ * Exercise:
+ * https://www.hackerrank.com/challenges/tutorial-intro
  */
 public class IntroToTutorialChallenges {
 
