@@ -1,4 +1,4 @@
-package Sorting;
+package Algorithms.Sorting;
 
 import java.util.Scanner;
 
@@ -6,25 +6,24 @@ import java.util.Scanner;
  * Created by Andreas Zinonos on 23/05/17.
  *
  * Exercise:
- * https://www.hackerrank.com/challenges/insertionsort1
+ * https://www.hackerrank.com/challenges/insertionsort2
  */
-public class InsertionSort1 {
+public class InsertionSort2 {
 
-    public static void insertIntoSorted(int[] ar) {
-
-        int value = ar[ar.length - 1];
-        int i = ar.length - 2;
-        while (i >= 0 && value < ar[i]){
-            ar[i+1] = ar[i];
+    public static void insertionSortPart2(int[] ar)
+    {
+        for(int i = 1; i < ar.length; i++){
+            int x =  ar[i];
+            int j = i;
+            while (0 < j && x < ar[j-1]){
+                ar[j] = ar[j-1];
+                j--;
+            }
+            ar[j] = x;
             printArray(ar);
-            i--;
         }
-        ar[i+1] = value;
-        printArray(ar);
     }
 
-
-    /* Tail starts here */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int s = in.nextInt();
@@ -32,14 +31,14 @@ public class InsertionSort1 {
         for(int i=0;i<s;i++){
             ar[i]=in.nextInt();
         }
-        insertIntoSorted(ar);
+        insertionSortPart2(ar);
+
     }
-
-
     private static void printArray(int[] ar) {
         for(int n: ar){
             System.out.print(n+" ");
         }
         System.out.println("");
     }
+
 }

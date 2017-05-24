@@ -1,5 +1,4 @@
-package Sorting;
-import java.math.BigInteger;
+package Algorithms.Sorting;
 import java.util.*;
 
 /**
