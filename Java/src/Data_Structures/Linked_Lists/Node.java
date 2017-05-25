@@ -8,4 +8,6 @@ package Data_Structures.Linked_Lists;
 public class Node {
         int data;
         Node next;
+        // prev is used in the later exercises
+        Node prev;
 }
